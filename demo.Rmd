@@ -1,0 +1,51 @@
+---
+title: Demo Rmd
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+# Data processing
+
+```{r}
+iris.area <- iris %>% 
+mutate(Petal.Area = Petal.Length * Petal.Width, Sepal.Area = Sepal.Length * Sepal.Width) 
+res <- iris.area %>% 
+group_by(Species) %>% 
+summarize(Petal.Area.avg = mean(Petal.Area), Sepal.Area.avg = mean(Sepal.Area)) %>% 
+left_join(iris.area) # , by='Species'
+
+print(res)
+
+
+library(knitr)
+res %>% head() %>% kable()
+```
+
+more plots
+```{r}
+ggplot() + geom_histogram(data = res, aes(x=Sepal.Length))
+ggplot() + geom_histogram(data=res, aes(x=Sepal.Length)) + geom_histogram(data=res, aes(x=Petal.Length, fill='red'))
+
+ggplot(data=res) + geom_histogram(aes(x=Sepal.Length)) + geom_histogram(aes(x=Petal.Length, fill='red'))
+
+ggplot(data=res) + geom_point(aes(x=Sepal.Width, y=Sepal.Length))
+ggplot(data=res) + geom_point(aes(x=Sepal.Width, y=Sepal.Length, col=Species))
+
+ggplot(data=res) + geom_point(aes(x=Sepal.Width, y=Sepal.Length, col=Species)) + geom_line(aes(x=Sepal.Width, y=Sepal.Length, col=Species))
+ggplot(data=res, aes(x=Sepal.Width, y=Sepal.Length, col=Species)) + geom_point() + geom_line()
+
+ggplot(data=res, aes(x=Sepal.Width, y=Sepal.Length, col=Species)) + geom_point()
+```
+
+```{r}
+ggplot(res, aes(x=Sepal.Area, y=Petal.Area, col=Species)) + geom_point() + geom_line(aes(x=Sepal.Area, y=Sepal.Area/5, col='separator'))  + geom_line(aes(x=Sepal.Area, y=(Sepal.Area/5)+4.6, col='separator'))
+```
+
+How to build an Rmarkdown document?
+```{r, eval=F}
+library(rmarkdown)
+render("demo.Rmd")
+```
