@@ -99,10 +99,9 @@ After the submission deadline, you will be expcted to review/comment on 2 other 
         1. Data Visualization
             1. Summary statistics i.e. Box Plot
             1. Distribution & Normality (i.e. histogram, empirical cumulative density function, Q-Q plot)
-        1. Commentary
-
-To Remember: Grouping a metric by a dimension then running analysis. 
-
+        1. Commentary    
+    
+    To Remember: Grouping a metric by a dimension then running analysis. 
 2. Inferential Data Analysis:
     1. Parameter Inference (confidence intervals)
     1. Hypothesis Testing (null hypothesis testing)
