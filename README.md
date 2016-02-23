@@ -1,5 +1,5 @@
 # Project 1: Traffic Data Analysis
-project duration: 21/2/2016 - 7/4/2016
+project duration: 24/2/2016 - 7/4/2016
 
 ## Project Description
 
