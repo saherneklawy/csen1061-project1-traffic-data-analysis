@@ -1,5 +1,5 @@
 # Project 1: Traffic Data Analysis
-project duration: 21/2/2016 - 7/4/2016
+project duration: 24/2/2016 - 7/4/2016
 
 ## Project Description
 
@@ -16,14 +16,20 @@ People can report the state of traffic into one of the following categories:
 as well as ask for updates.
 
 You are provided with data of reports from Feb 6 2016 to Feb 20 2016 (around 2 weeks of data).
-Given this data set, you need to apply the concepts introduced to you so far in the course to come up with an data analysis report. This should include:
+Given this data set, you need to apply the concepts introduced to you so far in the course to come up with a data analysis report. This should include:
 
-1. Figure out the different metrics to describe the state of traffic.
-2. For the different metrics, describe how they behave on different dimensions (eg: areas, roads, ...).
-3. Describe the reporting behaviour on different dimensions.
-4. Come up with at least 2 hypotheses and verify/disprove them using the data provided. This is at least through confidence intervals and providing enough logical commentary.
+1. Figure out the different metrics of interest in this dataset.
+2. Figure out the dimensions by which you could aggregate, group, or facet the metrics of interest.
+3. Apply what you learned about descriptive statistics to investigate the metrics and dimensions.
+4. Apply what you learned about data visualization and distribution investigation.
+5. Apply what you learned about parameter inference to calculate confidence intervals for some of the descriptive statistics you calculated.
+6. [Bonus] Come up with at least 2 hypotheses and verify/disprove them using "Null Hypothesis Testing" supported with textual commentary.
 
-Note that you are expected to augment, manipulate, clean the data to reach more information. For example the data doesn't include the city for the given road. You need to figure this out.
+See "Data Analysis Getting Started" below.
+
+Note that for all the above you need to support your conclusions and observations with textual commentary.
+
+Furthermore, you are expected to augment, manipulate, clean the data to reach more information. For example the data doesn't include the city for the given road. You need to figure this out.
 
 
 ## Data definition
@@ -99,10 +105,9 @@ After the submission deadline, you will be expcted to review/comment on 2 other 
         1. Data Visualization
             1. Summary statistics i.e. Box Plot
             1. Distribution & Normality (i.e. histogram, empirical cumulative density function, Q-Q plot)
-        1. Commentary
-
-To Remember: Grouping a metric by a dimension then running analysis. 
-
+        1. Commentary    
+    
+    To Remember: Grouping a metric by a dimension then running analysis. 
 2. Inferential Data Analysis:
     1. Parameter Inference (confidence intervals)
     1. Hypothesis Testing (null hypothesis testing)
